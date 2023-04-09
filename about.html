@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <nav>
+                <div class="nav">
+                    <ul>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="about.html">About Me</a></li>
+                        <li> <a href="Carrer.html">Carrer</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user .jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title2"> About Me</h1>
+                <p>I'm Dhushyanth   ,currently pursuing a Bachelor's degree in <b>Artificial Intelligence and Data Science</b> at Sona College. My interests include listening to music and browsing the internet. I am currently interning at <b>Kaar Technologies</b>, where I have gained experience working with Angular, Flask, and TypeScript. Through this opportunity, I have learned to adapt to new technologies and thrive in a dynamic work environment. I am a self-motivated individual with a strong passion for learning and expanding my skill set. I am committed to delivering quality work and collaborating effectively with my peers to achieve project goals.</p>
+                <div class="tab-title">
+                    <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-link"onclick="opentab('Hobbies')">Hobbies</p>
+                    <p class="tab-link"onclick="opentab('project')">Projects</p>
+
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer </span><br>using Angular</li>
+                            <li><span>Programmer </span></li>
+                            <li><span>Designer</span></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>Intern </span><br>Present Working at Kaar Technologies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Hobbies">
+                        <ul>
+                            <li>Photoshop</li>
+                            <li>Editng</li>
+                            <li>Browsing Web</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content " id="project">
+                        <ul>
+                            <li><span>Portfolio </span><br>using Html ,CSS & JS</li>
+                            <li><span>Sales Forecast Prediction </span><br>using Angular (Working)</li>                            
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+var tablinks = document.getElementsByClassName("tab-link");
+var tabcontents = document.getElementsByClassName("tab-content");
+
+function opentab(tabname) {
+
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active-link");
+  }
+  
+  for (var i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].classList.remove("active-tab");
+  }
+  
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+</body>
+</html>

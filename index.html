@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<div class="head">
+    <div class="container">
+        <nav>
+            <div class="nav" >
+                <ul>
+                  <li> <a href="index.html">Home</a></li>
+                  <li> <a href="about.html">About Me</a></li>
+                  <li> <a href="Carrer.html">Carrer</a></li>
+                  <li> <a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="head-text">
+        <img src="home pic.jpg">
+        
+            <h1>Hi, I'm <br><span>Dhushyanth</span><br><br>Now Student at <span>SONA</span> College</h1>
+          </div>
+        </div>  
+    </div>
+</div>
+<br>
+
+<div id="slide">
+    <div class="container">
+        <h1 class="sub-title">Certifications</h1>
+        <div id="slideshow-container">
+           
+            <div class="slide">
+              <img src="nptel java.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+              <img src="ibm.png" alt="Image 2">
+            </div>
+            <div class="slide">
+              <img src="nptel.jpeg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="flutter.jpg" alt="Image 3">
+            </div>
+    </div>
+</div>
+
+
+<script>
+
+let slideIndex = 1;
+showSlide(slideIndex);
+
+
+let slideInterval = setInterval(() => {
+  changeSlide(1);
+}, 3000); 
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex - 1].style.display = "block";
+}
+
+
+</script>
+</body>
+</html>
